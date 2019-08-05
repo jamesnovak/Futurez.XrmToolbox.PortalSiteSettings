@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Futurez.XrmToolBox.PortalSiteSettings</id>
+    <version>1.2019.08.1</version>
+    <title>Portal Site Settings Manager</title>
+    <authors>jamesnovak</authors>
+    <owners>jamesnovak</owners>
+	<projectUrl>https://github.com/jamesnovak/Futurez.XrmToolBox.PortalSiteSettings</projectUrl>
+    <iconUrl>https://i0.wp.com/futurezconsulting.com/wp-content/uploads/2017/02/logo-oval-large-1.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Manage Power Portal Site Setting records in a single interface.</description>
+	<releaseNotes>Initial deployment</releaseNotes>
+    <copyright>Copyright © Futurez Consulting 2019</copyright>
+    <tags>XrmToolBox Portal Site Settings Manager</tags>
+    <dependencies>
+		<dependency id="XrmToolBox" version="1.2019.6.33" />
+    </dependencies>
+  </metadata>
+</package>

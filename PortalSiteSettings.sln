@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.757
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PortalSiteSettings", "PortalSiteSettings\PortalSiteSettings.csproj", "{BEAC13F1-DC64-4ADE-9F11-1CA2E17A7EC9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BEAC13F1-DC64-4ADE-9F11-1CA2E17A7EC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BEAC13F1-DC64-4ADE-9F11-1CA2E17A7EC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BEAC13F1-DC64-4ADE-9F11-1CA2E17A7EC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BEAC13F1-DC64-4ADE-9F11-1CA2E17A7EC9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {628327D4-B905-4D68-9B24-D2262C9ED543}
+	EndGlobalSection
+EndGlobal
