@@ -608,6 +608,7 @@ namespace Futurez.XrmToolBox
         {
             base.UpdateConnection(newService, detail, actionName, parameter);
             crmGridSettings.OrganizationService = newService;
+            LoadPortalSites();
         }
 
         /// <summary>
