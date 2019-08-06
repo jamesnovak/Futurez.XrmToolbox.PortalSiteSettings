@@ -5,6 +5,7 @@ using Microsoft.Xrm.Sdk.Query;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.ServiceModel;
 using System.Text;
 using System.Windows.Forms;
 using XrmToolBox.Extensibility;
@@ -50,20 +51,37 @@ namespace Futurez.XrmToolBox
                     AsyncArgument = null,
                     Message = "Loading Active Portal Website Records",
                     MessageWidth = 340,
-                    MessageHeight = 150,
+                    MessageHeight = 150,                    
                     Work = (w, e) =>
                     {
-                        // Instantiate QueryExpression QEadx_website
+                        w.ReportProgress(0);
+
                         var query = new QueryExpression("adx_website") {
-                            ColumnSet = new ColumnSet("adx_parentwebsiteid", "adx_websiteid", "adx_name", "adx_primarydomainname", "adx_partialurl")
+                            ColumnSet = new ColumnSet(
+                                "adx_parentwebsiteid", 
+                                "adx_websiteid", 
+                                "adx_name", 
+                                "adx_primarydomainname", 
+                                "adx_partialurl")
                         };
 
-                        var sites = Service.RetrieveMultiple(query);
-                        e.Result = sites;
+                        try
+                        {
+                            var sites = Service.RetrieveMultiple(query);
+                            e.Result = sites;
+                        }
+                        catch (FaultException ex)
+                        {
+                            e.Result = ex;
+                        }
+                        finally {
+                            w.ReportProgress(100);
+                        }
+
                     },
                     ProgressChanged = e =>
                     {
-                        SendMessageToStatusBar?.Invoke(this, new StatusBarMessageEventArgs(e.ProgressPercentage, e.UserState.ToString()));
+                        SendMessageToStatusBar?.Invoke(this, new StatusBarMessageEventArgs(e.ProgressPercentage, e.UserState?.ToString()));
                     },
                     PostWorkCallBack = e =>
                     {
@@ -72,8 +90,13 @@ namespace Futurez.XrmToolBox
 
                         ClearUI();
 
-                        var sites = e.Result as EntityCollection;
+                        var err = e.Result as FaultException;
+                        if (err != null) {
+                            MessageBox.Show(this, $"An error occured attempting to load the list of Active Website Records. Has Portals been deployed to this tenant?\n\n{err.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return;
+                        }
 
+                        var sites = e.Result as EntityCollection;
                         var items = new List<ComboDisplayItem>();
                         
                         foreach (var ent in sites.Entities)
