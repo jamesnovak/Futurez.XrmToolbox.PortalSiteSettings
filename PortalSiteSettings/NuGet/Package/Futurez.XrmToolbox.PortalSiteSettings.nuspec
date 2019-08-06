@@ -16,5 +16,6 @@
     <dependencies>
 		<dependency id="XrmToolBox" version="1.2019.6.33" />
     </dependencies>
+	<license type="file">license\license.txt</license>
   </metadata>
 </package>
