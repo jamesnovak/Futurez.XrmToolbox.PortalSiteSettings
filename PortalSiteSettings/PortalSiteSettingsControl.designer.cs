@@ -59,8 +59,6 @@
             this.colOldValue = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.coNewVal = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panelPreviewTools = new System.Windows.Forms.Panel();
-            this.buttonPreview = new System.Windows.Forms.Button();
-            this.buttonSave = new System.Windows.Forms.Button();
             this.labelPreviewSettingUpdates = new System.Windows.Forms.Label();
             this.splitterVert = new System.Windows.Forms.Splitter();
             this.panelPropGrid = new System.Windows.Forms.Panel();
@@ -169,7 +167,7 @@
             this.comboActiveSites.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboActiveSites.FormattingEnabled = true;
             this.comboActiveSites.Location = new System.Drawing.Point(81, 3);
-            this.comboActiveSites.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboActiveSites.Margin = new System.Windows.Forms.Padding(2);
             this.comboActiveSites.Name = "comboActiveSites";
             this.comboActiveSites.Size = new System.Drawing.Size(264, 21);
             this.comboActiveSites.TabIndex = 8;
@@ -183,7 +181,7 @@
             this.tableMain.Controls.Add(this.panelSites, 0, 0);
             this.tableMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableMain.Location = new System.Drawing.Point(0, 25);
-            this.tableMain.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableMain.Margin = new System.Windows.Forms.Padding(2);
             this.tableMain.Name = "tableMain";
             this.tableMain.RowCount = 2;
             this.tableMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 27F));
@@ -201,7 +199,7 @@
             this.panelMainLayout.Controls.Add(this.panelPropGrid);
             this.panelMainLayout.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelMainLayout.Location = new System.Drawing.Point(2, 29);
-            this.panelMainLayout.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelMainLayout.Margin = new System.Windows.Forms.Padding(2);
             this.panelMainLayout.Name = "panelMainLayout";
             this.panelMainLayout.Size = new System.Drawing.Size(817, 573);
             this.panelMainLayout.TabIndex = 0;
@@ -212,7 +210,7 @@
             this.panelCurrentSettings.Controls.Add(this.panelCurrSettingTool);
             this.panelCurrentSettings.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelCurrentSettings.Location = new System.Drawing.Point(190, 318);
-            this.panelCurrentSettings.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelCurrentSettings.Margin = new System.Windows.Forms.Padding(2);
             this.panelCurrentSettings.Name = "panelCurrentSettings";
             this.panelCurrentSettings.Size = new System.Drawing.Size(625, 253);
             this.panelCurrentSettings.TabIndex = 17;
@@ -231,7 +229,7 @@
             this.crmGridSettings.EntityReferenceClickable = true;
             this.crmGridSettings.FilterColumns = "";
             this.crmGridSettings.Location = new System.Drawing.Point(0, 30);
-            this.crmGridSettings.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.crmGridSettings.Margin = new System.Windows.Forms.Padding(2);
             this.crmGridSettings.Name = "crmGridSettings";
             this.crmGridSettings.ReadOnly = true;
             this.crmGridSettings.RowHeadersWidth = 20;
@@ -252,7 +250,7 @@
             this.panelCurrSettingTool.Controls.Add(this.buttonDelete);
             this.panelCurrSettingTool.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelCurrSettingTool.Location = new System.Drawing.Point(0, 0);
-            this.panelCurrSettingTool.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelCurrSettingTool.Margin = new System.Windows.Forms.Padding(2);
             this.panelCurrSettingTool.Name = "panelCurrSettingTool";
             this.panelCurrSettingTool.Padding = new System.Windows.Forms.Padding(5, 3, 5, 3);
             this.panelCurrSettingTool.Size = new System.Drawing.Size(625, 30);
@@ -265,7 +263,7 @@
             this.flowLayoutPanel1.Controls.Add(this.textBoxFind);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(5, 3);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(487, 22);
             this.flowLayoutPanel1.TabIndex = 16;
@@ -296,7 +294,7 @@
             // 
             this.textBoxFind.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.textBoxFind.Location = new System.Drawing.Point(221, 2);
-            this.textBoxFind.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxFind.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxFind.Name = "textBoxFind";
             this.textBoxFind.Size = new System.Drawing.Size(200, 20);
             this.textBoxFind.TabIndex = 15;
@@ -333,7 +331,7 @@
             this.splitterHoriz.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.splitterHoriz.Dock = System.Windows.Forms.DockStyle.Top;
             this.splitterHoriz.Location = new System.Drawing.Point(190, 311);
-            this.splitterHoriz.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.splitterHoriz.Margin = new System.Windows.Forms.Padding(2);
             this.splitterHoriz.Name = "splitterHoriz";
             this.splitterHoriz.Size = new System.Drawing.Size(625, 7);
             this.splitterHoriz.TabIndex = 21;
@@ -345,7 +343,7 @@
             this.panelPreview.Controls.Add(this.panelPreviewTools);
             this.panelPreview.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelPreview.Location = new System.Drawing.Point(190, 0);
-            this.panelPreview.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelPreview.Margin = new System.Windows.Forms.Padding(2);
             this.panelPreview.Name = "panelPreview";
             this.panelPreview.Size = new System.Drawing.Size(625, 311);
             this.panelPreview.TabIndex = 18;
@@ -366,7 +364,7 @@
             listViewGroup1,
             listViewGroup2});
             this.listViewPreview.Location = new System.Drawing.Point(0, 30);
-            this.listViewPreview.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.listViewPreview.Margin = new System.Windows.Forms.Padding(2);
             this.listViewPreview.Name = "listViewPreview";
             this.listViewPreview.Size = new System.Drawing.Size(625, 281);
             this.listViewPreview.TabIndex = 0;
@@ -394,40 +392,14 @@
             // panelPreviewTools
             // 
             this.panelPreviewTools.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelPreviewTools.Controls.Add(this.buttonPreview);
-            this.panelPreviewTools.Controls.Add(this.buttonSave);
             this.panelPreviewTools.Controls.Add(this.labelPreviewSettingUpdates);
             this.panelPreviewTools.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelPreviewTools.Location = new System.Drawing.Point(0, 0);
-            this.panelPreviewTools.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelPreviewTools.Margin = new System.Windows.Forms.Padding(2);
             this.panelPreviewTools.Name = "panelPreviewTools";
             this.panelPreviewTools.Padding = new System.Windows.Forms.Padding(5, 3, 5, 3);
             this.panelPreviewTools.Size = new System.Drawing.Size(625, 30);
             this.panelPreviewTools.TabIndex = 20;
-            // 
-            // buttonPreview
-            // 
-            this.buttonPreview.Dock = System.Windows.Forms.DockStyle.Right;
-            this.buttonPreview.Enabled = false;
-            this.buttonPreview.Location = new System.Drawing.Point(492, 3);
-            this.buttonPreview.Margin = new System.Windows.Forms.Padding(2, 2, 5, 2);
-            this.buttonPreview.Name = "buttonPreview";
-            this.buttonPreview.Size = new System.Drawing.Size(63, 22);
-            this.buttonPreview.TabIndex = 16;
-            this.buttonPreview.Text = "Preview";
-            this.buttonPreview.UseVisualStyleBackColor = true;
-            // 
-            // buttonSave
-            // 
-            this.buttonSave.Dock = System.Windows.Forms.DockStyle.Right;
-            this.buttonSave.Enabled = false;
-            this.buttonSave.Location = new System.Drawing.Point(555, 3);
-            this.buttonSave.Margin = new System.Windows.Forms.Padding(5, 2, 2, 2);
-            this.buttonSave.Name = "buttonSave";
-            this.buttonSave.Size = new System.Drawing.Size(63, 22);
-            this.buttonSave.TabIndex = 15;
-            this.buttonSave.Text = "Save";
-            this.buttonSave.UseVisualStyleBackColor = true;
             // 
             // labelPreviewSettingUpdates
             // 
@@ -444,7 +416,7 @@
             // 
             this.splitterVert.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.splitterVert.Location = new System.Drawing.Point(183, 0);
-            this.splitterVert.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.splitterVert.Margin = new System.Windows.Forms.Padding(2);
             this.splitterVert.Name = "splitterVert";
             this.splitterVert.Size = new System.Drawing.Size(7, 571);
             this.splitterVert.TabIndex = 18;
@@ -456,7 +428,7 @@
             this.panelPropGrid.Controls.Add(this.propGridSettings);
             this.panelPropGrid.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelPropGrid.Location = new System.Drawing.Point(0, 0);
-            this.panelPropGrid.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelPropGrid.Margin = new System.Windows.Forms.Padding(2);
             this.panelPropGrid.Name = "panelPropGrid";
             this.panelPropGrid.Size = new System.Drawing.Size(183, 571);
             this.panelPropGrid.TabIndex = 22;
@@ -465,7 +437,7 @@
             // 
             this.propGridSettings.Dock = System.Windows.Forms.DockStyle.Fill;
             this.propGridSettings.Location = new System.Drawing.Point(0, 0);
-            this.propGridSettings.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.propGridSettings.Margin = new System.Windows.Forms.Padding(2);
             this.propGridSettings.Name = "propGridSettings";
             this.propGridSettings.Size = new System.Drawing.Size(181, 569);
             this.propGridSettings.TabIndex = 18;
@@ -478,9 +450,9 @@
             this.panelSites.Controls.Add(this.labelActiveSites);
             this.panelSites.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelSites.Location = new System.Drawing.Point(2, 2);
-            this.panelSites.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelSites.Margin = new System.Windows.Forms.Padding(2);
             this.panelSites.Name = "panelSites";
-            this.panelSites.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.panelSites.Padding = new System.Windows.Forms.Padding(3);
             this.panelSites.Size = new System.Drawing.Size(817, 23);
             this.panelSites.TabIndex = 16;
             // 
@@ -550,8 +522,6 @@
         private System.Windows.Forms.ToolStripMenuItem toolButtonSave; 
         private System.Windows.Forms.ColumnHeader colOldValue;
         private System.Windows.Forms.Panel panelMainLayout;
-        private System.Windows.Forms.Button buttonPreview;
-        private System.Windows.Forms.Button buttonSave;
         private System.Windows.Forms.Panel panelCurrentSettings;
         private xrmtb.XrmToolBox.Controls.CRMGridView crmGridSettings;
         private System.Windows.Forms.Panel panelCurrSettingTool;
