@@ -1,16 +1,17 @@
-﻿using McTools.Xrm.Connection;
+﻿using System;
+using System.Collections.Generic;
+using System.ServiceModel;
+using System.Windows.Forms;
+
 using Microsoft.Xrm.Sdk;
 using Microsoft.Xrm.Sdk.Messages;
 using Microsoft.Xrm.Sdk.Query;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.ServiceModel;
-using System.Text;
-using System.Windows.Forms;
+
+using McTools.Xrm.Connection;
 using XrmToolBox.Extensibility;
 using XrmToolBox.Extensibility.Args;
 using XrmToolBox.Extensibility.Interfaces;
+using Futurez.XrmToolBox.Helper;
 
 namespace Futurez.XrmToolBox
 {
@@ -19,8 +20,9 @@ namespace Futurez.XrmToolBox
         //private Settings mySettings;
         private EntityCollection _currSiteSettingsColl { get; set; }
         private WebSiteSettings _currWebSiteSettings { get; set; }
+        private ToolSettings _toolSettings;
 
-        public string RepositoryName => "https://github.com/jamesnovak/Futurez.XrmToolbox.PortalSiteSettings";
+        public string RepositoryName => "Futurez.XrmToolbox.PortalSiteSettings";
 
         public string UserName => "jamesnovak";
 
@@ -264,9 +266,14 @@ namespace Futurez.XrmToolBox
                         Name = "adx_name",
                         Text = ent.Entity["adx_name"].ToString(),
                         Tag = ent,
-                        Checked = true
+                        Checked = (ent.ValidationMessage.Length == 0 && ent.IsRequired)
                     };
 
+                    item.SubItems.Add(new ListViewItem.ListViewSubItem()
+                    {
+                        Name = "adx_value",
+                        Text = ent.OldValue?.ToString()
+                    });
                     item.SubItems.Add(new ListViewItem.ListViewSubItem()
                     {
                         Name = "adx_value",
@@ -274,8 +281,8 @@ namespace Futurez.XrmToolBox
                     });
                     item.SubItems.Add(new ListViewItem.ListViewSubItem()
                     {
-                        Name = "adx_value",
-                        Text = ent.OldValue?.ToString()
+                        Name = "Validation Messages",
+                        Text = ent.ValidationMessage
                     });
 
                     items.Add(item);
@@ -610,6 +617,17 @@ namespace Futurez.XrmToolBox
         /// <param name="e"></param>
         private void PortalSiteSettingsControl_Load(object sender, EventArgs e)
         {
+            // Loads or creates the settings for the plugin
+            if (!SettingsManager.Instance.TryLoad(GetType(), out _toolSettings))
+            {
+                _toolSettings = new ToolSettings();
+            }
+            if (!_toolSettings.LatestMessageDisplayed)
+            {
+                ShowInfoNotification("Site settings are being updated regularly, especially around the various Authentication settings. Check out the Learn More link for more detail on the latest updates.  If you see missing settings or inconsistencies, please submit an issue via Github!", new Uri("https://docs.microsoft.com/en-us/powerapps/maker/portals/configure/configure-site-settings"));
+                _toolSettings.LatestMessageDisplayed = true;
+            }
+
             ClearUI();
             ToggleEnabledState();
         }
@@ -621,7 +639,8 @@ namespace Futurez.XrmToolBox
         /// <param name="e"></param>
         private void PortalSiteSettingsControl_OnCloseTool(object sender, EventArgs e)
         {
-            // 
+            // save settings!
+            SettingsManager.Instance.Save(GetType(), _toolSettings);
         }
 
         /// <summary>
@@ -653,5 +672,6 @@ namespace Futurez.XrmToolBox
             // throw new NotImplementedException();
         }
         #endregion
+
     }
 }

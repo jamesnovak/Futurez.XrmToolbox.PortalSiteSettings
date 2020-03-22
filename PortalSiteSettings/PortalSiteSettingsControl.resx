@@ -146,4 +146,7 @@
         zIC2AAAAAElFTkSuQmCC
 </value>
   </data>
+  <data name="labelPreviewSettingUpdates.Text" xml:space="preserve">
+    <value>Below is the list of updated or new Site Setting values. Items grouped under Create are Site Settings that have not been created for this Portal.  Required values are checked by default and only checked items will be created/updated.</value>
+  </data>
 </root>

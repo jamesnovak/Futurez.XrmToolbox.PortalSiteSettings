@@ -58,6 +58,7 @@
             this.colSettingName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colOldValue = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.coNewVal = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colValMsg = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panelPreviewTools = new System.Windows.Forms.Panel();
             this.labelPreviewSettingUpdates = new System.Windows.Forms.Label();
             this.splitterVert = new System.Windows.Forms.Splitter();
@@ -88,9 +89,9 @@
             this.dropDownChanges});
             this.toolStripMenu.Location = new System.Drawing.Point(0, 0);
             this.toolStripMenu.Name = "toolStripMenu";
+            this.toolStripMenu.Padding = new System.Windows.Forms.Padding(0, 0, 2, 0);
             this.toolStripMenu.Size = new System.Drawing.Size(821, 25);
             this.toolStripMenu.TabIndex = 4;
-            this.toolStripMenu.Text = "toolStrip1";
             // 
             // toolButtonClose
             // 
@@ -228,7 +229,7 @@
             this.crmGridSettings.Dock = System.Windows.Forms.DockStyle.Fill;
             this.crmGridSettings.EntityReferenceClickable = true;
             this.crmGridSettings.FilterColumns = "";
-            this.crmGridSettings.Location = new System.Drawing.Point(0, 30);
+            this.crmGridSettings.Location = new System.Drawing.Point(0, 36);
             this.crmGridSettings.Margin = new System.Windows.Forms.Padding(2);
             this.crmGridSettings.Name = "crmGridSettings";
             this.crmGridSettings.ReadOnly = true;
@@ -238,7 +239,7 @@
             this.crmGridSettings.ShowFriendlyNames = true;
             this.crmGridSettings.ShowIdColumn = false;
             this.crmGridSettings.ShowIndexColumn = false;
-            this.crmGridSettings.Size = new System.Drawing.Size(625, 223);
+            this.crmGridSettings.Size = new System.Drawing.Size(625, 217);
             this.crmGridSettings.TabIndex = 11;
             this.crmGridSettings.SelectionChanged += new System.EventHandler(this.CrmGridSettings_SelectionChanged);
             // 
@@ -253,7 +254,7 @@
             this.panelCurrSettingTool.Margin = new System.Windows.Forms.Padding(2);
             this.panelCurrSettingTool.Name = "panelCurrSettingTool";
             this.panelCurrSettingTool.Padding = new System.Windows.Forms.Padding(5, 3, 5, 3);
-            this.panelCurrSettingTool.Size = new System.Drawing.Size(625, 30);
+            this.panelCurrSettingTool.Size = new System.Drawing.Size(625, 36);
             this.panelCurrSettingTool.TabIndex = 14;
             // 
             // flowLayoutPanel1
@@ -265,27 +266,27 @@
             this.flowLayoutPanel1.Location = new System.Drawing.Point(5, 3);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(487, 22);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(487, 28);
             this.flowLayoutPanel1.TabIndex = 16;
             // 
             // labelCurrentSiteSettings
             // 
-            this.labelCurrentSiteSettings.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.labelCurrentSiteSettings.AutoSize = true;
-            this.labelCurrentSiteSettings.Location = new System.Drawing.Point(2, 5);
+            this.labelCurrentSiteSettings.Dock = System.Windows.Forms.DockStyle.Left;
+            this.labelCurrentSiteSettings.Location = new System.Drawing.Point(2, 0);
             this.labelCurrentSiteSettings.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelCurrentSiteSettings.Name = "labelCurrentSiteSettings";
-            this.labelCurrentSiteSettings.Size = new System.Drawing.Size(146, 13);
+            this.labelCurrentSiteSettings.Size = new System.Drawing.Size(351, 21);
             this.labelCurrentSiteSettings.TabIndex = 12;
-            this.labelCurrentSiteSettings.Text = "Current Site Settings Records";
+            this.labelCurrentSiteSettings.Text = "Current Portal Site Settings: Filter settings and delete records from this list.";
             this.labelCurrentSiteSettings.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // labelFilter
             // 
-            this.labelFilter.Location = new System.Drawing.Point(152, 0);
+            this.labelFilter.Location = new System.Drawing.Point(357, 0);
             this.labelFilter.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelFilter.Name = "labelFilter";
-            this.labelFilter.Size = new System.Drawing.Size(65, 21);
+            this.labelFilter.Size = new System.Drawing.Size(39, 21);
             this.labelFilter.TabIndex = 16;
             this.labelFilter.Text = "Filter:";
             this.labelFilter.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -293,10 +294,10 @@
             // textBoxFind
             // 
             this.textBoxFind.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.textBoxFind.Location = new System.Drawing.Point(221, 2);
+            this.textBoxFind.Location = new System.Drawing.Point(2, 23);
             this.textBoxFind.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxFind.Name = "textBoxFind";
-            this.textBoxFind.Size = new System.Drawing.Size(200, 20);
+            this.textBoxFind.Size = new System.Drawing.Size(108, 20);
             this.textBoxFind.TabIndex = 15;
             this.textBoxFind.TextChanged += new System.EventHandler(this.TextBoxFind_TextChanged);
             // 
@@ -307,7 +308,7 @@
             this.buttonReloadSettings.Location = new System.Drawing.Point(492, 3);
             this.buttonReloadSettings.Margin = new System.Windows.Forms.Padding(2, 2, 5, 2);
             this.buttonReloadSettings.Name = "buttonReloadSettings";
-            this.buttonReloadSettings.Size = new System.Drawing.Size(63, 22);
+            this.buttonReloadSettings.Size = new System.Drawing.Size(63, 28);
             this.buttonReloadSettings.TabIndex = 14;
             this.buttonReloadSettings.Text = "Reload";
             this.buttonReloadSettings.UseVisualStyleBackColor = true;
@@ -320,7 +321,7 @@
             this.buttonDelete.Location = new System.Drawing.Point(555, 3);
             this.buttonDelete.Margin = new System.Windows.Forms.Padding(5, 2, 2, 2);
             this.buttonDelete.Name = "buttonDelete";
-            this.buttonDelete.Size = new System.Drawing.Size(63, 22);
+            this.buttonDelete.Size = new System.Drawing.Size(63, 28);
             this.buttonDelete.TabIndex = 13;
             this.buttonDelete.Text = "Delete";
             this.buttonDelete.UseVisualStyleBackColor = true;
@@ -354,7 +355,8 @@
             this.listViewPreview.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.colSettingName,
             this.colOldValue,
-            this.coNewVal});
+            this.coNewVal,
+            this.colValMsg});
             this.listViewPreview.Dock = System.Windows.Forms.DockStyle.Fill;
             listViewGroup1.Header = "Create";
             listViewGroup1.Name = "newItems";
@@ -363,10 +365,11 @@
             this.listViewPreview.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
             listViewGroup1,
             listViewGroup2});
-            this.listViewPreview.Location = new System.Drawing.Point(0, 30);
+            this.listViewPreview.HideSelection = false;
+            this.listViewPreview.Location = new System.Drawing.Point(0, 36);
             this.listViewPreview.Margin = new System.Windows.Forms.Padding(2);
             this.listViewPreview.Name = "listViewPreview";
-            this.listViewPreview.Size = new System.Drawing.Size(625, 281);
+            this.listViewPreview.Size = new System.Drawing.Size(625, 275);
             this.listViewPreview.TabIndex = 0;
             this.listViewPreview.UseCompatibleStateImageBehavior = false;
             this.listViewPreview.View = System.Windows.Forms.View.Details;
@@ -389,6 +392,11 @@
             this.coNewVal.Text = "New Value";
             this.coNewVal.Width = 300;
             // 
+            // colValMsg
+            // 
+            this.colValMsg.Text = "Validation Message(s)";
+            this.colValMsg.Width = 300;
+            // 
             // panelPreviewTools
             // 
             this.panelPreviewTools.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -398,18 +406,18 @@
             this.panelPreviewTools.Margin = new System.Windows.Forms.Padding(2);
             this.panelPreviewTools.Name = "panelPreviewTools";
             this.panelPreviewTools.Padding = new System.Windows.Forms.Padding(5, 3, 5, 3);
-            this.panelPreviewTools.Size = new System.Drawing.Size(625, 30);
+            this.panelPreviewTools.Size = new System.Drawing.Size(625, 36);
             this.panelPreviewTools.TabIndex = 20;
             // 
             // labelPreviewSettingUpdates
             // 
-            this.labelPreviewSettingUpdates.Dock = System.Windows.Forms.DockStyle.Left;
+            this.labelPreviewSettingUpdates.Dock = System.Windows.Forms.DockStyle.Fill;
             this.labelPreviewSettingUpdates.Location = new System.Drawing.Point(5, 3);
             this.labelPreviewSettingUpdates.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelPreviewSettingUpdates.Name = "labelPreviewSettingUpdates";
-            this.labelPreviewSettingUpdates.Size = new System.Drawing.Size(394, 22);
+            this.labelPreviewSettingUpdates.Size = new System.Drawing.Size(613, 28);
             this.labelPreviewSettingUpdates.TabIndex = 13;
-            this.labelPreviewSettingUpdates.Text = "Site Settings Updates and Inserts - Check the items you wish to commit.";
+            this.labelPreviewSettingUpdates.Text = resources.GetString("labelPreviewSettingUpdates.Text");
             this.labelPreviewSettingUpdates.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // splitterVert
@@ -480,6 +488,7 @@
             this.Controls.Add(this.toolStripMenu);
             this.Name = "PortalSiteSettingsControl";
             this.Size = new System.Drawing.Size(821, 629);
+            this.OnCloseTool += new System.EventHandler(this.PortalSiteSettingsControl_OnCloseTool);
             this.Load += new System.EventHandler(this.PortalSiteSettingsControl_Load);
             this.Resize += new System.EventHandler(this.PortalSiteSettingsControl_Resize);
             this.toolStripMenu.ResumeLayout(false);
@@ -535,5 +544,6 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Label labelFilter;
         private System.Windows.Forms.LinkLabel linkLabelPortalRecordsMover;
+        private System.Windows.Forms.ColumnHeader colValMsg;
     }
 }
